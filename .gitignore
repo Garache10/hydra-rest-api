@@ -1,0 +1,22 @@
+# vs code folders and configurations
+/.vscode
+/.vscode/extensions
+/.vscode/settings.json
+/.vscode/tasks.json
+/.vscode/launch.json
+/.vscode/keybindings.json
+/.vscode/snippets
+/.vscode/extensions.json
+/.vscode/extensions.code-workspace
+
+# node modules
+node_modules
+
+# yarn cache
+.yarn-cache
+
+# build folder
+build
+
+# Environment variables
+.env
