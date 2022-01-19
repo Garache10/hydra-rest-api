@@ -3,6 +3,7 @@ import Morgan from "morgan";
 import Cors from "cors";
 import "dotenv/config";
 
+import userRoute from "./api/routes/user.route"; // import userRoute
 class Server {
   public app = Express.application;
 
@@ -22,7 +23,9 @@ class Server {
     this.app.set("port", process.env.APP_PORT || 3000);
   }
 
-  public routes(): void {}
+  public routes(): void {
+    this.app.use("/api/user", userRoute);// use userRoute
+  }
 
   public start(): void {
     this.app.listen(this.app.get("port"), () => {
