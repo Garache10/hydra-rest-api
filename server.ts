@@ -24,6 +24,7 @@ class Server {
   }
 
   public routes(): void {
+    //this.app.use("/", (_, res) => res.send("Welcome to Hydra-RestAPI")); // Welcome message
     this.app.use("/api/user", userRoute);// use userRoute
   }
 

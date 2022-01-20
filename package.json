@@ -6,7 +6,9 @@
   "scripts": {
     "tsc": "tsc -w",
     "dev": "nodemon ./build/index.js",
-    "start": "tsc && node ./build/index.js"
+    "start": "tsc && node ./build/index.js",
+    "tsdev": "ts-node-dev --respawn index.ts",
+    "tsstart": "ts-node index.ts" 
   },
   "keywords": [],
   "author": "",
@@ -28,6 +30,7 @@
     "@types/jsonwebtoken": "^8.5.8",
     "@types/morgan": "^1.9.3",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ts-node-dev": "^1.1.8"
   }
 }

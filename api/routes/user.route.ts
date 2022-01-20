@@ -14,7 +14,7 @@ class UserRoute {
   routes() {
     this.router.get("/", this.controller.getAllUsers);
     this.router.get("/:id", this.controller.getUserById);
-    this.router.get("/username/:username", this.controller.getUserByUsername);
+    this.router.get("/:param/:value", this.controller.getUserByUsername);
     this.router.post("/", this.controller.createUser);
     this.router.post("/login", this.controller.loginUser);
     this.router.put("/:id", this.controller.updateUser);
