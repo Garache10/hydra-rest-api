@@ -4,7 +4,7 @@ interface IUser extends Mongoose.Document {
   username: string;
   password: string;
   active: boolean;
-  isPremium: boolean;
+  accountId: Mongoose.Types.ObjectId;
   encryptPassword(password: string): Promise<string>;
   validatePassword(password: string): Promise<boolean>;
 };

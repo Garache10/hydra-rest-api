@@ -6,12 +6,13 @@ const AccountSchema = new Mongoose.Schema<IAccount>({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  isPremium: { type: Boolean, default: false },
   image: { type: String }
 }, {
   timestamps: true
 });
 
-AccountSchema.methods.encryptPassword = async (password: string): Promise<string> => {
+AccountSchema.methods.encryptPassword = async (password: string): Promise<String> => {
   const salt = await Bcrypt.genSalt(10);
   return await Bcrypt.hash(password, salt);
 }
